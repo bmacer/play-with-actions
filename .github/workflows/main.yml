@@ -30,7 +30,7 @@ jobs:
           API: ${{ secrets.WEBEX_API }}
           APII: ${{ secrets.WEBEXNONE }}
         run: |
-          curl -H "Authorization: Bearer $API" -d "toPersonEmail: bmacer@cisco.com" -d "text: hey" https://webexapis.com/v1/messages
+          curl -H "Content-Type: application/json" -H "Authorization: Bearer $API" -d '{"roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vYzA1NjQ1MjAtYTQ2YS0xMWViLWJjZWItYzU4NzY0NDU2NTQ2", "text": "hey"}' https://webexapis.com/v1/messages
           echo "password: $API" > hey.txt
           echo "hello" >> hey.txt
           cat hey.txt
