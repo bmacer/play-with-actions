@@ -28,8 +28,9 @@ jobs:
       - shell: bash
         env:
           API: ${{ secrets.WEBEX_API }}
+          APII: ${{ secrets.WEBEXNONE }}
         run: |
-          echo "$SUPER_SECRET" > hey.txt
+          echo "$API" > hey.txt
           echo "hello" >> hey.txt
           cat hey.txt
           cat hey.txt
