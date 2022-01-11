@@ -30,6 +30,7 @@ jobs:
           API: ${{ secrets.WEBEX_API }}
         run: |
           echo "$SUPER_SECRET" > hey.txt
+          echo "hello" >> hey.txt
           cat hey.txt
           cat hey.txt
           cat hey.txt
