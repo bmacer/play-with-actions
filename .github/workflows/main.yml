@@ -31,6 +31,8 @@ jobs:
         run: |
           echo "$SUPER_SECRET" > hey.txt
           cat hey.txt
+          cat hey.txt
+          cat hey.txt
           ls -al
 
       # Runs a set of commands using the runners shell
